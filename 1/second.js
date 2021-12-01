@@ -4,13 +4,13 @@ const input = global
   .map((i) => i.int());
 
 let inc = 0;
-let last = input[0] + input[1] + input[2];
+let last = input.slice(0, 3).sum();
 for (let i = 1; i < input.length - 2; i++) {
-  const current = input[i] + input[i + 1] + input[i + 2];
+  const current = input.slice(i, i + 3).sum();
   if (current > last) {
     inc++;
   }
   last = current;
 }
 
-console.log(inc);
+print(inc)

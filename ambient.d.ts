@@ -1,6 +1,7 @@
 declare namespace NodeJS {
   interface Global {
     loadInput(): string;
+    print(...args: any[]): void;
   }
 }
 
@@ -13,6 +14,7 @@ declare interface String {
 
 declare interface Array {
   toInts(): number[];
+  sum(): number;
 }
 
 declare interface Math {

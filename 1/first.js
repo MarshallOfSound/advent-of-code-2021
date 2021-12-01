@@ -12,4 +12,4 @@ for (const depth of input.slice(1)) {
   last = depth;
 }
 
-console.log(inc);
+print(inc);

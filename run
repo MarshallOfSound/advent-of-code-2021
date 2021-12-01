@@ -19,6 +19,8 @@ global.loadInput = () => {
   throw new Error('Failed to find input file for current run');
 };
 
+global.print = (...args) => console.log(...args);
+
 String.prototype.lines = function () {
   return this.split('\n');
 };
@@ -33,6 +35,10 @@ String.prototype.reverse = function () {
 
 Array.prototype.toInts = function () {
   return this.map((i) => parseInt(i, 10));
+};
+
+Array.prototype.sum = function () {
+  return this.toInts().reduce((sum, n) => sum + n, 0);
 };
 
 String.prototype.int = function () {
